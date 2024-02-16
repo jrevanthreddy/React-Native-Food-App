@@ -16,6 +16,7 @@ import AddNewCard from './screens/AddNewCard';
 import Address from './screens/Address';
 import Favorite from './screens/Favorite';
 import PromoCodes from './screens/PromoCodes';
+import Slider from './Slider/Slider';
 
 
 
@@ -24,7 +25,7 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='SignIn'>
+      <Stack.Navigator initialRouteName='signIn'>
 
         <Stack.Screen name="signIn" component={signIn} options={{ title: 'Sign In', headerShown: false }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
@@ -41,6 +42,7 @@ export default function App() {
         <Stack.Screen name='AddNewCard' component={AddNewCard} options={{ title: 'Card Details' }} />
         <Stack.Screen name='Favorite' component={Favorite} options={{ title:'My Favorite'}} />
         <Stack.Screen name='PromoCodes' component={PromoCodes} />
+        <Stack.Screen name='Slider' component={Slider} options={{headerShown:false}}/>
 
       </Stack.Navigator>
     </NavigationContainer>
